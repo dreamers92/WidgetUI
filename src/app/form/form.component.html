@@ -1,0 +1,32 @@
+
+
+
+<div class="container main form">
+
+  <form [formGroup]="applicationForm" (ngSubmit)="submitForm()" novalidate>
+
+    <div class="row no-gutters m-0 p-4 justify-content-around">
+      <mat-form-field appearance="fill">
+        <mat-label>Insert your Name </mat-label>
+        <input matInput #input maxlength="50" placeholder="Ex. Nougat"  formControlName="name">
+        <mat-hint align="end">{{input.value?.length || 0}}/50</mat-hint>
+        <mat-error *ngIf="applicationForm.invalid">{{getErrorMessage()}}</mat-error>
+      </mat-form-field>
+    </div>
+
+    <div class="row no-gutters m-0 p-4 justify-content-around">
+      <mat-form-field appearance="fill">
+        <mat-label>Insert your Name </mat-label>
+        <input matInput #input maxlength="50" placeholder="Ex. Nougat"  formControlName="name">
+        <mat-hint align="end">{{input.value?.length || 0}}/50</mat-hint>
+        <mat-error *ngIf="applicationForm.invalid">{{getErrorMessage()}}</mat-error>
+      </mat-form-field>
+    </div>
+
+   
+    
+      <button >Submit</button>
+    </form>
+    <div class="col-12">  fsafsfsa</div>
+    <button class="btn-primary"   ngbTooltip="I'll always open to the right" placement="right">Hover me</button>
+</div>
