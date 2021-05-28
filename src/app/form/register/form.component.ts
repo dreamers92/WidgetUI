@@ -33,8 +33,8 @@ export class FormComponent implements OnInit  {
   }
 
   submitForm() {
-
-   
+    
+    this.applicationForm.markAllAsTouched();
  
     if(this.applicationForm.valid)
     {
@@ -53,10 +53,8 @@ export class FormComponent implements OnInit  {
 
     else
     {
-       
+       //We can send some message
     }
-
-  
    
   }
 
@@ -76,7 +74,6 @@ export class FormComponent implements OnInit  {
             }
             else
             {
-              
              //handle error using results CorrelationId the end user will report ID and support team will check loggs using the Id
             }
        
