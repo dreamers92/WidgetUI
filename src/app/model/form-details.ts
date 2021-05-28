@@ -1,5 +1,11 @@
-export class FormInfo
+export interface IContact
 {
-  name: string;
-  famiyName: string;
+  FirstName: string;
+  LastName: string;
+  EmailAddress: string;
+  Activity: string;
+  Comments: string;
+  ModifiedDate: string;
 }
+
+

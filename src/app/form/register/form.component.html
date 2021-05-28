@@ -1,0 +1,50 @@
+<div class="container formcontaoner">
+  <form *ngIf="!submitSucces"  [formGroup]="applicationForm"  novalidate>
+    <div class="row no-gutters m-0 p-4 justify-content-around">
+      <mat-form-field appearance="fill">
+        <mat-label>Insert your Name </mat-label>
+        <input matInput #input maxlength="50" placeholder="Ex. Nougat"  formControlName="name">
+        <mat-hint align="end">{{input.value?.length || 0}}/50</mat-hint>
+      </mat-form-field>
+    </div>
+    <div class="row no-gutters m-0 p-4 justify-content-around">
+      <mat-form-field appearance="fill">
+        <mat-label>Insert your Family Name </mat-label>
+        <input matInput #input maxlength="50" placeholder="Ex. Hashemi"  formControlName="lastName">
+        <mat-hint align="end">{{input.value?.length || 0}}/50</mat-hint>
+      </mat-form-field>
+    </div>
+    <div class="row no-gutters m-0 p-4 justify-content-around">
+      <mat-form-field appearance="fill">
+        <mat-label>Insert Your Email </mat-label>
+        <input matInput #input maxlength="50" placeholder="Ex. Pouria@google.com"  formControlName="emailAddress">
+        <mat-hint align="end">{{input.value?.length || 0}}/50</mat-hint>
+      </mat-form-field>
+    </div>
+    <div class="row no-gutters m-0 p-4 justify-content-around">
+    <mat-form-field appearance="fill">
+      <mat-label>Activity</mat-label>
+      <select matNativeControl required formControlName="activity">
+        <option value="Office Games">Office Games</option>
+        <option value="Healthy Lifestyle Challenge">Healthy Lifestyle Challenge</option>
+        <option value="Typing Speed Race">Typing Speed Race</option>
+      </select>
+    </mat-form-field>
+  </div>
+  <div class="row no-gutters m-0 p-4 justify-content-around">
+    <mat-form-field appearance="fill">
+      <mat-label>Insert your Comments here!</mat-label>
+      <textarea formControlName="comments"  matInput placeholder="Ex. It makes me feel..."></textarea>
+    </mat-form-field>
+  </div>
+    </form>
+    <div *ngIf="!submitSucces" class="row no-gutters m-0 p-4 justify-content-around">
+      <button (click)= submitForm() btn-primary>Submit Form</button>
+    </div>
+    <div *ngIf="submitSucces" class="row no-gutters m-0 p-4 justify-content-around">
+      <mat-label >Successfully Submitted!! </mat-label>
+    </div>
+    <div *ngIf="submitSucces" class="row no-gutters m-0 p-4 justify-content-around">
+      <button (click)= retunrHomePage() btn-primary>Retrun to Home Page</button>
+    </div>
+</div>

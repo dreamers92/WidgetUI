@@ -1,0 +1,37 @@
+<div class="container main">
+    <div class="row no-gutters">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope ="col">Name</th>
+                    <th scope ="col">Last Name</th>
+                    <th scope ="col">Email Address</th>
+                    <th scope ="col">Activity</th>
+                    <th scope ="col">Date Registered</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let contact of contacts; index as i">
+                    <td>
+                        {{contact.FirstName}}
+                    </td>
+                    <td>
+                        {{contact.LastName}}
+                    </td>
+                    <td>
+                        {{contact.EmailAddress}}
+                    </td> 
+                    <td>
+                        {{contact.Activity}}
+                    </td> 
+                    <td>
+                        {{contact.ModifiedDate}} 
+                    </td> 
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div  class="row no-gutters m-0 p-4 justify-content-around">
+        <button (click)= redirectToRegistration() btn-primary>Regsistration Page</button>
+    </div>
+</div>

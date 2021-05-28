@@ -36,7 +36,7 @@ import {MatSortModule} from '@angular/material/sort';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatBadgeModule} from '@angular/material/badge';
 
-import { FormComponent } from './form/form.component';
+import { FormComponent } from './form/register/form.component';
 
 
 
@@ -45,11 +45,13 @@ import { FormGroup, FormControl, FormsModule, ReactiveFormsModule } from '@angul
 
 import { HttpClientModule } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ViewRegistrationsComponent } from './form/view-registrations/view-registrations.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FormComponent
+    FormComponent,
+    ViewRegistrationsComponent
 
    
   ],
@@ -57,6 +59,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    HttpClientModule,
  
    MatAutocompleteModule,
    MatButtonModule,
